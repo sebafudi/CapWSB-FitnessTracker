@@ -1,6 +1,8 @@
 package com.capgemini.wsb.fitnesstracker.training.internal;
 
-// TODO : JavaDoc
+/**
+ * Available activity types: RUNNING, CYCLING, WALKING, SWIMMING, TENNIS
+ */
 public enum ActivityType {
 
     RUNNING("Running"),
@@ -9,6 +11,9 @@ public enum ActivityType {
     SWIMMING("Swimming"),
     TENNIS("Tenis");
 
+    /**
+     * Display name for given activity type
+     */
     private final String displayName;
 
     ActivityType(String displayName) {
@@ -18,5 +23,4 @@ public enum ActivityType {
     public String getDisplayName() {
         return displayName;
     }
-
 }

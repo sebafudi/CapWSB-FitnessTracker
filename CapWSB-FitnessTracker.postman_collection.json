@@ -74,7 +74,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/v1/users/email?email=Emma.Johnson@domain.com",
+					"raw": "http://localhost:8081/v1/users/email?email=emma",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,7 +88,7 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "Emma.Johnson@domain.com"
+							"value": "emma"
 						}
 					]
 				}
@@ -191,6 +191,155 @@
 					"path": [
 						"v1",
 						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/v1/trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/v1/trainings/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/v1/trainings/finished/2020-10-10T10:10:10.1000+00:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/finished/2024-01-10T10:10:10.1000+00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
+						"finished",
+						"2024-01-10T10:10:10.1000+00:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/v1/trainings/activityType?activityType=RUNNING",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/activityType?activityType=RUNNING",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
+						"activityType"
+					],
+					"query": [
+						{
+							"key": "activityType",
+							"value": "RUNNING"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/v1/trainings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\"id\":\"1\",\"firstName\":\"Joe\",\"lastName\":\"Doe\",\"birthdate\":\"2000-01-01\",\"email\":\"joedoe@example.com\"},\n    \"startTime\": \"2024-04-01T11:00:00\",\n    \"endTime\": \"2024-04-01T11:00:00\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": 10.52,\n    \"averageSpeed\": 8.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/v1/trainings/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\"id\":\"1\",\"firstName\":\"Joe\",\"lastName\":\"Doe\",\"birthdate\":\"2000-01-01\",\"email\":\"joedoe@example.com\"},\n    \"startTime\": \"2024-04-01T11:00:00\",\n    \"endTime\": \"2024-04-01T11:00:00\",\n    \"activityType\": \"RUNNING\",\n    \"distance\": 10.52,\n    \"averageSpeed\": 8.2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/trainings/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"trainings",
 						"1"
 					]
 				}
